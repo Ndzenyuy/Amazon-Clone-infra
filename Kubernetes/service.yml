@@ -1,10 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: amazon-app
-
+  name: amazon-app-service
 spec:
-  type: LoadBalancer
+  selector:
+    app: amazon-app
   ports:
-    - port: 80
-      targetPort: 80
+    - protocol: TCP
+      port: 80           # External port to expose the service
+      targetPort: 3000   # Port on the container
+  type: LoadBalancer
+

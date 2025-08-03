@@ -12,10 +12,11 @@ commonLabels:
   version: v1
 
 images:
-  - name: amazon-clone
+  - name: amazon-clone               
     newName: 997450571655.dkr.ecr.us-east-1.amazonaws.com/amazon-clone
     newTag: 0.0.1
 
 replicas:
-  - name: amazon-app
+  - name: amazon-app                 
     count: 2
+
